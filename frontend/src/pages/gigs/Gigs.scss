@@ -1,0 +1,152 @@
+.gigs {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  .container {
+    width: 1400px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px 0;
+
+    .breadcrumbs {
+      font-weight: 300;
+      text-transform: uppercase;
+      font-size: 13px;
+      color: #555;
+    }
+
+    p {
+      color: #999;
+      font-weight: 300;
+    }
+
+    .menu {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #555;
+      font-weight: 300;
+
+      input {
+        padding: 5px;
+        border: 1px solid lightgrey;
+        border-radius: 5px;
+        outline: none;
+
+        &::placeholder {
+          color: #999;
+        }
+      }
+      button {
+        background-color: #1dbf73;
+        color: #fff;
+        border: none;
+        padding: 5px 10px;
+        font-weight: 500;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    }
+    .search {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: white;
+      border-radius: 5px;
+      overflow: hidden;
+
+      .searchInput {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        width: 70%;
+        background-color: white;
+
+        img {
+          width: 20px;
+          height: 20px;
+          margin: 10px;
+        }
+
+        input {
+          border: none;
+          outline: none;
+          width: 100%;
+          height: 30px;
+          font-size: 14px;
+
+          &::placeholder {
+            color: gray;
+          }
+        }
+      }
+      button {
+        padding: 5px 10px;
+        border: none;
+        background-color: #1dbf73;
+        color: white;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+    }
+    .reset {
+      width: 20px;
+      height: 20px;
+      margin-left: 2rem;
+      cursor: pointer;
+    }
+    .right {
+      display: flex;
+      align-items: center;
+      position: relative;
+      gap: 10px;
+
+      .sortBy {
+        color: #555;
+        font-weight: 300;
+      }
+
+      .sortType {
+        font-weight: 500;
+      }
+
+      img {
+        width: 15px;
+        cursor: pointer;
+      }
+
+      .rightMenu {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        border-radius: 5px;
+        border: 0.5px solid lightgray;
+        position: absolute;
+        top: 30px;
+        right: 0;
+        z-index: 9;
+        padding: 20px;
+        color: #555;
+        background-color: #fff;
+
+        span {
+          cursor: pointer;
+        }
+      }
+    }
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px 20px;
+    }
+  }
+}

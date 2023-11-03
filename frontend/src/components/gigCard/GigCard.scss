@@ -1,0 +1,168 @@
+.gigCard {
+  width: 325px;
+  height: 405px;
+  border-radius: 5px;
+  overflow: hidden;
+  border: 1px solid rgb(239, 238, 238);
+  // box-shadow: 0 0 15px -5px rgba(0, 0, 0, 0.5);
+
+  .cover {
+    position: relative;
+    width: 100%;
+    height: 50%;
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    .cover-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease-in-out;
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+
+    .heart {
+      position: absolute;
+      top: 5px;
+      right: 10px;
+      width: 30px;
+      height: 30px;
+      object-fit: cover;
+    }
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 10px;
+    gap: 12px;
+    .user {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: rgb(52, 40, 40);
+      margin-top: 10px;
+      img {
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+    }
+    .desc {
+      display: -webkit-box;
+      -webkit-line-clamp: 2; /* number of lines to display */
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      height: 40px;
+    }
+
+    .rating {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      margin: 5px 0;
+      img {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    hr {
+      border: 1px solid rgb(239, 238, 238);
+      margin: 5px 0;
+    }
+
+    .details {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      img {
+        width: 20px;
+        height: 20px;
+      }
+
+      .price {
+        color: black;
+        span {
+          display: inline-block;
+          font-size: 16px;
+          padding-right: 5px;
+        }
+
+        h2 {
+          display: inline-block;
+          color: #555;
+          font-size: 18px;
+          font-weight: 400;
+          text-align: end;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .gigCard {
+    width: 100%;
+    height: auto;
+
+    img {
+      height: 40%;
+    }
+
+    .info {
+      gap: 10px;
+
+      .user {
+        gap: 5px;
+
+        img {
+          width: 24px;
+          height: 24px;
+        }
+      }
+
+      .rating {
+        gap: 5px;
+
+        img {
+          width: 16px;
+          height: 16px;
+        }
+      }
+
+      hr {
+        margin: 3px 0;
+      }
+
+      .details {
+        flex-direction: column;
+        align-items: flex-start;
+
+        img {
+          width: 16px;
+          height: 16px;
+          margin-right: 5px;
+        }
+
+        .price {
+          span {
+            font-size: 10px;
+          }
+
+          h2 {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
